@@ -1,0 +1,29 @@
+<!doctype html>
+<style>
+	img {
+		cursor: url(./img/magnifier.png), -webkit-zoom-in;
+		cursor: url(./img/magnifier.png), -moz-zoom-in;
+		cursor: url(./img/magnifier.png), zoom-in;
+		float: left;
+	}
+	img.active, img:active, .magnifier-lens {
+		cursor: none;
+	}
+	.magnifier-detail {float: left;}
+</style>
+<img src="./img/detail.jpg" data-magnifier-src="./img/detail.jpg" width="100" id="magnifier" alt="Test image">
+<script src="./lib/jquery-2.0.2.js"></script>
+<script src="../magnifier.jquery.js"></script>
+<script>
+	(function() {
+
+		'use strict';
+		
+		$('#magnifier').magnifier({
+			height: 200,
+			width: 300,
+			detailBackgroundColor: '#000'
+		});
+
+	})();
+</script>
